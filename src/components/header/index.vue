@@ -1,14 +1,16 @@
 <template>
   <div class="header ps_r">
     <div class="header_box flex w al_c sp_b pad_20">
-      <div class="header_box_l">
-        <div class="logo"></div>
+      <div class="header_box_l flex al_c">
+        <div class="logo ma_r_34">
+          <img src="../../assets/images/地鼠首页/图层 531.png" alt="" />
+        </div>
         <div class="nav ps_r">
           <div class="nav_list flex">
             <div
               v-for="(item, index) in navArr"
               :key="item.id"
-              class="nav_item pad_l_10 pad_r_20 fs_18"
+              class="nav_item pad_l_10 pad_r_25 fs_22"
               :class="activeIndex === index ? 'active_css' : ''"
               ref="nav_item"
               @click="activeNav(index)"
@@ -24,11 +26,13 @@
         </div>
       </div>
       <div class="header_box_r flex al_c">
-        <div class="QQ-contact pad_r_5 pad_l_5 pad_t_7 pad_b_7 ma_r_20">
-          <span class="fs_16">联系我们</span>
+        <div class="QQ-contact flex al_c pad_r_5 pad_l_5 pad_t_8 pad_b_8 ma_r_20">
+          <img src="../../assets/images/地鼠首页/形状 1.png" alt="">
+          <span class="fs_18 ma_l_3">联系我们</span>
         </div>
-        <div class="Watch-contact pad_r_5 pad_l_5 pad_t_7 pad_b_7">
-          <span class="fs_16">微信联系</span>
+        <div class="Watch-contact flex al_c  pad_r_5 pad_l_5 pad_t_8 pad_b_8">
+          <img src="../../assets/images/地鼠首页/形状 2.png" alt="">
+          <span class="fs_18 ma_l_3">微信联系</span>
         </div>
       </div>
     </div>
@@ -42,12 +46,12 @@
           v-for="(item, index) in productArr"
           :key="index"
         >
-          <img
-            src="../../../../fl_new_shop-dev/src/images/04.png"
-            alt=""
-            class=""
-          />
-          <p>{{ item.text }}</p>
+          <div
+            class="product_item_img pad_t_5 pad_b_5 pad_r_14 pad_l_14 flex al_c jcc"
+          >
+            <img :src="item.imgUrl" alt="" class="" />
+          </div>
+          <p class="fs_18">{{ item.text }}</p>
         </div>
       </div>
     </div>
@@ -82,23 +86,23 @@ export default {
       ],
       productArr: [
         {
-          imgUrl: "",
+          imgUrl: require("../../assets/images/地鼠首页/app开发.png"),
           text: "APP开发",
         },
         {
-          imgUrl: "",
+          imgUrl: require("../../assets/images/地鼠首页/小程序.png"),
           text: "小程序开发",
         },
         {
-          imgUrl: "",
+          imgUrl: require("../../assets/images/地鼠首页/微信开发.png"),
           text: "微信开发",
         },
         {
-          imgUrl: "",
+          imgUrl: require("../../assets/images/地鼠首页/小程序开发.png"),
           text: "系统开发",
         },
         {
-          imgUrl: "",
+          imgUrl: require("../../assets/images/地鼠首页/网站开发.png"),
           text: "网站开发",
         },
       ],
@@ -128,7 +132,12 @@ export default {
 .header {
   background: white;
   .header_box {
-    z-index: 22;
+    .logo {
+      width: 190px;
+      img {
+        width: 100%;
+      }
+    }
     .nav_item {
       user-select: none;
       cursor: pointer;
@@ -153,28 +162,35 @@ export default {
   .header_product {
     background: #effafe;
     width: 100%;
+    z-index: 99;
     transition: all 1s ease;
     .product_list {
-      margin-left: 19%;
+      margin-left: 25%;
       .product_item {
         user-select: none;
         cursor: pointer;
-        transition: all .3s ease;
+        transition: all 0.3s ease;
         p {
           margin-top: 15px;
         }
-        img {
-          width: 80px;
+        .product_item_img {
+          background: white;
+          width: 58px;
+          height: 41px;
           transition: all 1s ease;
+          img {
+            width: 100%;
+            margin: 0 auto;
+          }
         }
         &:hover {
-          img {
-            box-shadow: 0px 0px 5px 1px #000000;
-            margin-top: -15px;
+          .product_item_img {
+            box-shadow: 0px 1px 7px 1px rgba(0, 69, 101, 0.22);
+            transform: translateY(-5px);
           }
-          p {
-            margin-top: 15px;
-          }
+          // p {
+          //   margin-top: 30px;
+          // }
         }
       }
     }
@@ -186,6 +202,6 @@ export default {
 .product_css {
   opacity: 0;
   overflow: hidden;
-  z-index: -1;
+  display: none;
 }
 </style>
