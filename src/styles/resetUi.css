@@ -1,0 +1,32 @@
+.el-carousel__container .el-carousel__arrow {
+    border-radius: 0 !important;
+    width: 53px;
+    height: 53px;
+    background: #000000;
+    opacity: 0.5;
+    font-size: 24px;
+}
+
+.el-carousel__container .el-carousel__arrow--left {
+    left: 60px;
+}
+
+.el-carousel__container .el-carousel__arrow--right {
+    right: 60px;
+}
+
+.el-carousel__indicators .el-carousel__button {
+    width: 11px !important;
+    height: 4px !important;
+    background: #00A0E9 !important;
+    border-radius: 2px !important;
+}
+
+.el-carousel__indicator.is-active button {
+    background: #FFFFFF !important;
+    opacity: 0.4 !important;
+}
+
+.el-carousel__container .el-carousel__arrow:hover {
+    color: #00AFFF;
+}
