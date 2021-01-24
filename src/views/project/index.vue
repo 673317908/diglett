@@ -104,6 +104,7 @@ export default {
       background: #dab866;
       border-radius: 10px;
       color: white;
+      cursor: pointer;
     }
   }
   .project_center {
