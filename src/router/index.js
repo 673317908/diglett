@@ -7,21 +7,27 @@ Vue.use(VueRouter);
 const routes = [
   {
     path: "/",
-    redirect: "/home"
+    redirect: "Home"
   },
   {
-    path: "/",
-    name: "Home",
+    path: "/index",
+    name: "Index",
     component: Layout,
     children: [
       {
         path: "/home",
-        name: "HomeIndex",
+        name: "Home",
         component: () =>
           import("../views/home/index.vue")
+      },
+      {
+        path: "/project",
+        name: "Project",
+        component: () =>
+          import("../views/project/index.vue")
       }
     ]
-  }
+  },
 ];
 
 const router = new VueRouter({

@@ -13,7 +13,7 @@
               class="nav_item pad_l_10 pad_r_25 fs_22"
               :class="activeIndex === index ? 'active_css' : ''"
               ref="nav_item"
-              @click="activeNav(index)"
+              @click="activeNav(item, index)"
             >
               {{ item.text }}
             </div>
@@ -26,12 +26,14 @@
         </div>
       </div>
       <div class="header_box_r flex al_c">
-        <div class="QQ-contact flex al_c pad_r_5 pad_l_5 pad_t_8 pad_b_8 ma_r_20">
-          <img src="../../assets/images/地鼠首页/形状 1.png" alt="">
+        <div
+          class="QQ-contact flex al_c pad_r_5 pad_l_5 pad_t_8 pad_b_8 ma_r_20"
+        >
+          <img src="../../assets/images/地鼠首页/形状 1.png" alt="" />
           <span class="fs_18 ma_l_3">联系我们</span>
         </div>
-        <div class="Watch-contact flex al_c  pad_r_5 pad_l_5 pad_t_8 pad_b_8">
-          <img src="../../assets/images/地鼠首页/形状 2.png" alt="">
+        <div class="Watch-contact flex al_c pad_r_5 pad_l_5 pad_t_8 pad_b_8">
+          <img src="../../assets/images/地鼠首页/形状 2.png" alt="" />
           <span class="fs_18 ma_l_3">微信联系</span>
         </div>
       </div>
@@ -66,6 +68,7 @@ export default {
         {
           id: 1,
           text: "首页",
+          path: "/home",
         },
         {
           id: 2,
@@ -74,14 +77,17 @@ export default {
         {
           id: 3,
           text: "项目案例",
+          path: "/project",
         },
         {
           id: 4,
           text: "新闻资讯",
+          path: "",
         },
         {
           id: 5,
           text: "关于我们",
+          path: "",
         },
       ],
       productArr: [
@@ -120,9 +126,14 @@ export default {
     // },
   },
   methods: {
-    activeNav(index) {
+    activeNav(item, index) {
       this.activeWidth = this.$refs.nav_item[index].offsetWidth;
       this.activeIndex = index;
+      if (item.path) {
+        this.$router.push({ path: item.path });
+      } else {
+        return false;
+      }
     },
   },
 };
