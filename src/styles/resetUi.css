@@ -30,3 +30,9 @@
 .el-carousel__container .el-carousel__arrow:hover {
     color: #00AFFF;
 }
+
+.el-pagination.is-background .btn-next,
+.el-pagination.is-background .btn-prev,
+.el-pagination.is-background .el-pager li {
+    background: none;
+}
