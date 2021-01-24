@@ -82,7 +82,7 @@ export default {
         {
           id: 4,
           text: "新闻资讯",
-          path: "",
+          path: "/news",
         },
         {
           id: 5,
