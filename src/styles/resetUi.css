@@ -36,3 +36,7 @@
 .el-pagination.is-background .el-pager li {
     background: none;
 }
+
+.el-form .el-form-item .el-form-item__content {
+  margin-left: 0 !important;
+}
