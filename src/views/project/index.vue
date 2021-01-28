@@ -1,7 +1,7 @@
 <template>
   <div class="project">
     <div class="banner">
-      <img src="../../assets/images/行业案例_slices/banner1@2x.png" alt="" />
+      <img src="../../assets/images/case_slices/banner1@2x.png" alt="" />
     </div>
     <div class="filter pad_t_20 pad_b_20">
       <div class="filter_list mini_w flex al_c">
@@ -19,7 +19,7 @@
       <div class="project_list mini_w flex fl_w">
         <div class="project_item ma_b_24 ps_r" v-for="item in 11" :key="item">
           <img
-            src="../../assets/images/行业案例_slices/色相／饱和度 2@2x.png"
+            src="../../assets/images/case_slices/baohe2@2x.png"
             alt=""
           />
           <div class="project_item_title ps_a">
@@ -28,7 +28,7 @@
             <div class="line ma_t_24"></div>
             <img
               class="ma_t_23"
-              src="../../assets/images/行业案例_slices/手机 (3)@2x.png"
+              src="../../assets/images/case_slices/shouji@2x.png"
               alt=""
             />
           </div>
@@ -45,7 +45,7 @@
       </div>
       <div class="project_more">
         <img
-          src="../../assets/images/行业案例_slices/组 67 拷贝@2x.png"
+          src="../../assets/images/case_slices/zu67@2x.png"
           alt=""
         />
         <p class="fs_26 ma_t_15">下滑查看更多</p>

@@ -5,7 +5,7 @@
         <TitleTow :titleSetting="gradeTitleSetting" />
         <div class="grade_swiper flex ps_r">
           <div class="grade_swiper_left ps_a">
-            <img src="../../../assets/images/地鼠首页/左.png" alt="" />
+            <img src="../../../assets/images/home_slices/left.png" alt="" />
           </div>
           <div class="grade_swiper_list flex jcc">
             <div
@@ -13,7 +13,7 @@
               v-for="item in 3"
               :key="item"
             >
-              <img src="../../../assets/images/地鼠首页/多边形.png" alt="" />
+              <img src="../../../assets/images/home_slices/duobianxing.png" alt="" />
               <div class="grade_swiper_item_content ps_a">
                 <div
                   class="grade_swiper_item_header flex al_c sp_b ma_b_26 ma_t_32 ma_r_19 ma_l_19"
@@ -30,14 +30,14 @@
               </div>
               <div class="grade_swiper_item_footer">
                 <img
-                  src="../../../assets/images/地鼠首页/图层 694@2x.png"
+                  src="../../../assets/images/home_slices/tuceng694@2x.png"
                   alt=""
                 />
               </div>
             </div>
           </div>
           <div class="grade_swiper_right ps_a">
-            <img src="../../../assets/images/地鼠首页/右.png" alt="" />
+            <img src="../../../assets/images/home_slices/right.png" alt="" />
           </div>
         </div>
       </div>
@@ -67,7 +67,7 @@ export default {
 
 <style scoped lang='less'>
   .grade {
-    background: url("../../../assets/images/地鼠首页/组 59 拷贝@2x.png") no-repeat;
+    background: url("../../../assets/images/home_slices/zu59@2x.png") no-repeat;
     .grade_swiper {
       margin-top: 80px;
       .grade_swiper_left,

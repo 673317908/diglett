@@ -3,7 +3,7 @@
     <div class="footer_box">
       <div class="footer_box_top flex al_c">
         <div class="logo flex al_c">
-          <img src="../../assets/images/地鼠首页/图层 531.png" alt="">
+          <img src="../../assets/images/home_slices/logo.png" alt="">
         </div>
         <div class="qrcode flex al_c">qrcode</div>
       </div>

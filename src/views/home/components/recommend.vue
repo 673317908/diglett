@@ -13,7 +13,7 @@
             <p class="fs_20 fw_700 ma_t_16">{{ item.title }}</p>
           </div>
         </div>
-        <div class="recommend_more text_c fs_42">+</div>
+        <div class="recommend_more text_c fs_42" @click="checkMore">+</div>
         <p class="text_c ma_t_10" style="color: #dab866">查看更多</p>
       </div>
     </div>
@@ -37,37 +37,43 @@ export default {
       recommendArr: [
         {
           id: 1,
-          imgUrl: require("../../../assets/images/地鼠首页/社交APP-Bene.png"),
+          imgUrl: require("../../../assets/images/home_slices/shejiaoAPP-Bene.png"),
           title: "社交APP-Bene社交",
         },
         {
           id: 2,
-          imgUrl: require("../../../assets/images/地鼠首页/租房APP-租客.png"),
+          imgUrl: require("../../../assets/images/home_slices/zufangAPP.png"),
           title: "租房APP-租客",
         },
         {
           id: 3,
-          imgUrl: require("../../../assets/images/地鼠首页/教育APP-腾讯课堂.png"),
+          imgUrl: require("../../../assets/images/home_slices/jiaoyuAPP.png"),
           title: "教育APP-腾讯课堂",
         },
         {
           id: 4,
-          imgUrl: require("../../../assets/images/地鼠首页/金融APP-优财金融.png"),
+          imgUrl: require("../../../assets/images/home_slices/jinrongAPP.png"),
           title: "金融APP-优财金融",
         },
         {
           id: 5,
-          imgUrl: require("../../../assets/images/地鼠首页/电商APP-轻拍购物.png"),
+          imgUrl: require("../../../assets/images/home_slices/dianshangAPP.png"),
           title: "电商APP-轻拍购物",
         },
         {
           id: 6,
-          imgUrl: require("../../../assets/images/地鼠首页/餐饮APP-米熊.png"),
+          imgUrl: require("../../../assets/images/home_slices/canyinAPP.png"),
           title: "餐饮APP-米熊",
         },
       ],
     };
   },
+  methods:{
+    // 查看更多
+    checkMore(){
+      this.$router.push({path:"/project"})
+    }
+  }
 };
 </script>
 
@@ -88,7 +94,7 @@ export default {
         height: 6px;
         background: #dab866;
         left: 0;
-        bottom: 0;
+        bottom: -1px;
         display: none;
         position: absolute;
       }

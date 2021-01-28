@@ -5,7 +5,7 @@
         <TitleTow :titleSetting="serviceTitleSetting" />
         <div class="service_img">
           <img
-            src="../../../assets/images/地鼠首页/The Executive Team 拷贝@2x.png"
+            src="../../../assets/images/home_slices/The Executive Team@2x.png"
             alt=""
           />
         </div>

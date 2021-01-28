@@ -40,27 +40,27 @@ export default {
         {
           id: 1,
           text: "国家高新技术企业",
-          imgUrl: require("../../../assets/images/地鼠首页/dc-icon-1.png"),
+          imgUrl: require("../../../assets/images/home_slices/dc-icon-1.png"),
         },
         {
           id: 2,
           text: "校企合作基地",
-          imgUrl: require("../../../assets/images/地鼠首页/dc-icon-2.png"),
+          imgUrl: require("../../../assets/images/home_slices/dc-icon-2.png"),
         },
         {
           id: 3,
           text: "校企合作基地",
-          imgUrl: require("../../../assets/images/地鼠首页/dc-icon-2.png"),
+          imgUrl: require("../../../assets/images/home_slices/dc-icon-2.png"),
         },
         {
           id: 4,
           text: "校企合作基地",
-          imgUrl: require("../../../assets/images/地鼠首页/dc-icon-2.png"),
+          imgUrl: require("../../../assets/images/home_slices/dc-icon-2.png"),
         },
         {
           id: 5,
           text: "校企合作基地",
-          imgUrl: require("../../../assets/images/地鼠首页/dc-icon-2.png"),
+          imgUrl: require("../../../assets/images/home_slices/dc-icon-2.png"),
         },
       ],
     };

@@ -1,7 +1,7 @@
 <template>
   <div class="news">
     <div class="banner ma_b_28">
-      <img src="../../assets/images/公司动态_slices/banner@2x.png" alt="" />
+      <img src="../../assets/images/company_slices/banner@2x.png" alt="" />
     </div>
     <div class="news_list mini_w pad_t_20 pad_b_34 ma_b_40">
       <div class="news_nav flex jcc al_c pad_b_16">
@@ -23,7 +23,7 @@
         >
           <div class="news_item_l ma_r_11">
             <img
-              src="../../assets/images/公司动态_slices/图层 39@2x.png"
+              src="../../assets/images/company_slices/tuceng39@2x.png"
               alt=""
             />
           </div>
@@ -33,7 +33,7 @@
             </div>
             <div class="news_item_number">
               <img
-                src="../../assets/images/公司动态_slices/图层 558@2x.png"
+                src="../../assets/images/company_slices/tuceng558@2x.png"
                 alt=""
                 class="ma_r_4"
               />

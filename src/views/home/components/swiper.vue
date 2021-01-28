@@ -2,7 +2,7 @@
   <div class="banner">
     <el-carousel :interval="5000" arrow="always" :loop="true" height="700px">
       <el-carousel-item v-for="item in 4" :key="item">
-      <img style="width:100%;height:100%;" src="../../../assets/images/地鼠首页/图层 527.png" alt="">
+      <img style="width:100%;height:100%;" src="../../../assets/images/home_slices/tuceng527.png" alt="">
       </el-carousel-item>
     </el-carousel>
   </div>

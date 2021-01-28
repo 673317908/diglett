@@ -30,14 +30,14 @@ export default {
     return {
       coreArr: [
         {
-          imgUrl: require("../../../assets/images/地鼠首页/图层 3 拷贝@2x.png"),
+          imgUrl: require("../../../assets/images/home_slices/tuceng3@2x.png"),
         },
         {
           title: "微信定制开发",
           text: "微信公众号、微信商城、H5开、小程序开发发",
         },
         {
-          imgUrl: require("../../../assets/images/地鼠首页/系统 拷贝@2x.png"),
+          imgUrl: require("../../../assets/images/home_slices/xitong@2x.png"),
         },
         {
           title: "网站开发",
@@ -48,14 +48,14 @@ export default {
           text: "Android、IOS系统开发，满足全行业类型需求",
         },
         {
-          imgUrl: require("../../../assets/images/地鼠首页/we@2x.png"),
+          imgUrl: require("../../../assets/images/home_slices/we@2x.png"),
         },
         {
           title: "系统研发",
           text: "企业集团OA系统开发CRM、ERP系统",
         },
         {
-          imgUrl: require("../../../assets/images/地鼠首页/完为止@2x.png"),
+          imgUrl: require("../../../assets/images/home_slices/weizhi.png"),
         },
       ],
       coreTitleSetting: {
@@ -105,7 +105,6 @@ export default {
       bottom: -33px;
       transform: translateX(-50%);
       user-select: none;
-      cursor: pointer;
     }
   }
 </style>
