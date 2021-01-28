@@ -8,6 +8,8 @@ import "./styles/index.min.css";
 // ui库
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
+// 地图
+import "./utils/aMap"
 
 Vue.use(ElementUI);
 
