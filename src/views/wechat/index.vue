@@ -16,13 +16,19 @@
     <div class="benefits ps_r">
       <div class="benefits_box mini_w">
         <div class="benefits_list">
-          <div class="benefits_item flex ma_b_38" v-for="item in 3" :key="item">
+          <div
+            class="benefits_item flex ma_b_38"
+            v-for="item in bennefitArr"
+            :key="item.id"
+          >
             <div class="benefits_item_img">
               <img src="../../assets/images/wechat_slices/duigou.png" alt />
             </div>
             <div class="benefits_item_info ma_l_15">
-              <p class="fs_26 fw_700 ma_b_5">扩大影响力/ Expand influence</p>
-              <p class="fs_16">展示企业品牌营销信息、增加粉丝互动、深化品牌传播、降低营销成本；</p>
+              <p class="fs_26 fw_700 ma_b_5">{{ item.title }}</p>
+              <p class="fs_16">
+                {{ item.tips }}
+              </p>
             </div>
           </div>
         </div>
@@ -33,15 +39,21 @@
       <div class="senior_box mini_w">
         <Title :titleSetting="seniorTitle" />
         <div class="senior_list flex fl_w al_c">
-          <div class="senior_item ma_b_14 ma_r_14 flex fl_d al_c" v-for="item in 4" :key="item">
+          <div
+            class="senior_item ma_b_14 ma_r_14 flex fl_d al_c"
+            v-for="item in seniorArr"
+            :key="item.id"
+          >
             <div class="senior_img">
-              <img src="../../assets/images/wechat_slices/xingzhuang13@2x.png" alt />
+              <img :src="item.imgUrl" alt />
             </div>
             <div class="senior_title pad_b_14">
-              <p class="fs_26 text_c">功能定制</p>
+              <p class="fs_26 text_c">{{ item.title }}</p>
             </div>
             <div class="senior_desc text_c">
-              <p class="fs_16">根据您的实际需求定制您所想要的功能，以实现功能体验完全贴近用户的微信公众平台</p>
+              <p class="fs_16">
+                {{ item.content }}
+              </p>
             </div>
           </div>
         </div>
@@ -52,15 +64,19 @@
       <div class="industry_box mini_w">
         <Title :titleSetting="industryTitle" />
         <div class="industry_list flex fl_w ma_t_52">
-          <div class="industry_item ma_r_16 ma_b_22 pad_20" v-for="item in 8" :key="item">
+          <div
+            class="industry_item ma_r_16 ma_b_22 pad_20"
+            v-for="item in industryArr"
+            :key="item.id"
+          >
             <div class="industry_img ma_b_42">
-              <img src="../../assets/images/wechat_slices/dianshang.png" alt />
+              <img :src="item.imgUrl" alt />
             </div>
             <div class="industry_title text_c fw_700">
-              <p class="fs_28">o2o电商</p>
+              <p class="fs_28">{{item.title}}</p>
             </div>
             <div class="industry_desc ma_t_23">
-              <p class="fs_16">线上运营，线下消费，线上线下结合</p>
+              <p class="fs_16 text_c">{{item.content}}</p>
             </div>
           </div>
         </div>
@@ -89,7 +105,11 @@
       <div class="show_box mini_w">
         <Title :titleSetting="showTitle" />
         <div class="show_list ma_t_46 flex">
-          <div class="show_item ma_r_10 pad_t_24 pad_r_50 pad_l_50" v-for="item in 5" :key="item">
+          <div
+            class="show_item ma_r_10 pad_t_24 pad_r_50 pad_l_50"
+            v-for="item in 5"
+            :key="item"
+          >
             <div class="show_img">
               <img src="../../assets/images/wechat_slices/zu59@2x.png" alt />
             </div>
@@ -115,17 +135,109 @@
 import Title from "../../components/title/title";
 export default {
   components: {
-    Title
+    Title,
   },
   data() {
     return {
+      bennefitArr: [
+        {
+          id: 1,
+          title: "扩大影响力/ Expand influence",
+          tips:
+            "展示企业品牌营销信息、增加粉丝互动、深化品牌传播、降低营销成本； ",
+        },
+        {
+          id: 2,
+          title: "提高转化率/ Increase conversion rate",
+          tips:
+            "发展粉丝经济，实现在线支付购买，获取产品服务更快捷方便，提高转化率；",
+        },
+        {
+          id: 3,
+          title: "减少流失率/ Reduce attrition",
+          tips:
+            "开发官网、商城、客服、客户管理等功能，使消费行为形成闭环，减少流失率。",
+        },
+      ],
+      seniorArr: [
+        {
+          id: 1,
+          imgUrl: require("../../assets/images/wechat_slices/xingzhuang13@2x.png"),
+          title: "功能定制",
+          content:
+            "根据您的实际需求定制您所想要的功能，以实现功能体验完全贴近用户的微信公众平台",
+        },
+        {
+          id: 2,
+          imgUrl: require("../../assets/images/wechat_slices/zu56@2x.png"),
+          title: "接口定制",
+          content:
+            "可开发各种高级接口，定制如：ERP,CRM,OA.等第三方平台或已有平台接口",
+        },
+        {
+          id: 3,
+          imgUrl: require("../../assets/images/wechat_slices/zu57@2x.png"),
+          title: "设计定制",
+          content:
+            "可根据行业特征结合您的需求定制设计独特的个性化界面，更能体现企业的专有性",
+        },
+        {
+          id: 4,
+          imgUrl: require("../../assets/images/wechat_slices/zu58@2x.png"),
+          title: "个性定制",
+          content:
+            "可以完全按照您的想法和思路定制您所想要的微信公众平台，想您所想定您所需。",
+        },
+      ],
+      industryArr:[
+        {
+          imgUrl:require("../../assets/images/wechat_slices/dianshang.png"),
+          title:"o2o电商",
+          content:"线上运营，线下消费，线上线下结合"
+        },
+         {
+          imgUrl:require("../../assets/images/wechat_slices/dianshang.png"),
+          title:"预约服务",
+          content:"合理分配门店资源，弹性管理预约时间"
+        },
+         {
+          imgUrl:require("../../assets/images/wechat_slices/baoxian@2x.png"),
+          title:"保险金融",
+          content:"险种介绍；险种对比筛选，项目众筹"
+        },
+         {
+          imgUrl:require("../../assets/images/wechat_slices/paotuixiaochengxu@2x.png"),
+          title:"跑腿外卖",
+          content:"在线下单，地图导航，定位搜索"
+        },
+         {
+          imgUrl:require("../../assets/images/wechat_slices/xinwen2@2x.png"),
+          title:"新闻资讯",
+          content:"同步热点咨询，在线话题互动"
+        },
+         {
+          imgUrl:require("../../assets/images/wechat_slices/pingtai@2x.png"),
+          title:"多店平台",
+          content:"合理分配门店资源，弹性管理预约时间"
+        },
+         {
+          imgUrl:require("../../assets/images/wechat_slices/wuyeguanli@2x.png"),
+          title:"物业管理",
+          content:"物业缴费，物业报修，物业通知"
+        },
+         {
+          imgUrl:require("../../assets/images/wechat_slices/jiaoyupeixun(1)@2x.png"),
+          title:"教育培训",
+          content:"在线报名，网上课程，教师预约"
+        }
+      ],
       recommendTitle: {
         title: "推荐案例",
         tips: "RECOMMENDED CASE",
         titleColor: "white",
-        tipsColor: "white"
+        tipsColor: "white",
       },
-       recommendArr: [
+      recommendArr: [
         {
           id: 1,
           imgUrl: require("../../assets/images/home_slices/shejiaoAPP-Bene.png"),
@@ -162,25 +274,25 @@ export default {
         tips:
           "让您的微信公众平台更具吸引力，针对行业及企业的个性化需求，定制开发利用最大化，用户体验最优化，生产管理做到精益求精为您创造更",
         titleColor: "#000000",
-        tipsColor: "#666666"
+        tipsColor: "#666666",
       },
       industryTitle: {
         title: "场景行业",
         tips: "微信应用遍布各个行业，使用广泛，效果极佳",
         titleColor: "#000000",
-        tipsColor: "#666666"
+        tipsColor: "#666666",
       },
       showTitle: {
         title: "业务展示",
         tips: "Business presentation",
         titleColor: "#000000",
-        tipsColor: "#666666"
-      }
+        tipsColor: "#666666",
+      },
     };
   },
   created() {},
   mounted() {},
-  methods: {}
+  methods: {},
 };
 </script>
 
@@ -265,7 +377,7 @@ export default {
   .industry_item {
     background: #165ac9;
     width: 285px;
-    padding: 60px 12px 65px 12px;
+    padding: 60px 0 65px 6;
     color: white;
     &:nth-child(4n + 4) {
       margin-right: 0;

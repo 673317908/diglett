@@ -8,7 +8,7 @@
       <Title
         :titleSetting="focusTitle"
         class="ps_a"
-        style="top:60px;left:50%;transform: translateX(-50%);"
+        style="top: 60px; left: 50%; transform: translateX(-50%)"
       />
     </div>
     <!-- 应对场景 -->
@@ -18,13 +18,13 @@
         <div class="scenario_list flex fl_w ma_t_50">
           <div
             class="scenario_item ma_r_15 ma_b_20 pad_t_22 pad_b_20"
-            v-for="item in 20"
-            :key="item"
+            v-for="item in appArr"
+            :key="item.id"
           >
             <div class="scenario_item_img pad_t_11 pad_r_23 pad_b_15 pad_l_12">
-              <img src="../../assets/images/app_slices/yiliao.png" alt />
+              <img :src="item.imgUrl" alt />
             </div>
-            <p class="fs_18 ma_t_9 text_c">医疗健康</p>
+            <p class="fs_18 ma_t_9 text_c">{{item.text}}</p>
           </div>
         </div>
       </div>
@@ -55,7 +55,7 @@
 import Title from "../../components/title/title";
 export default {
   components: {
-    Title
+    Title,
   },
   data() {
     return {
@@ -64,22 +64,22 @@ export default {
         tips:
           "APP开发中，我们注重于整个平台的交互效果、用户体验、兼容性、个性化定制、安全性、数据分析处理",
         titleColor: "#000000",
-        tipsColor: "#666666"
+        tipsColor: "#666666",
       },
       scenarioTitle: {
         title: "应用场景介绍",
         tips:
           "我们对各行业的用户调查和市场分析，确保能针对不同行业开发出最适合消费者的APP",
         titleColor: "#000000",
-        tipsColor: "#666666"
+        tipsColor: "#666666",
       },
       recommendTitle: {
         title: "推荐案例",
         tips: "RECOMMENDED CASE",
         titleColor: "white",
-        tipsColor: "white"
+        tipsColor: "white",
       },
-             recommendArr: [
+      recommendArr: [
         {
           id: 1,
           imgUrl: require("../../assets/images/home_slices/shejiaoAPP-Bene.png"),
@@ -111,11 +111,114 @@ export default {
           title: "餐饮APP-米熊",
         },
       ],
+      appArr:[
+        {
+          id:1,
+          imgUrl:require("../../assets/images/app_slices/yiliao.png"),
+          text:"医疗健康"
+        },
+        {
+          id:2,
+          imgUrl:require("../../assets/images/app_slices/dianshang.png"),
+          text:"电商"
+        },
+        {
+          id:3,
+          imgUrl:require("../../assets/images/app_slices/zhibo.png"),
+          text:"直播"
+        },
+        {
+          id:4,
+          imgUrl:require("../../assets/images/app_slices/shejiao.png"),
+          text:"社交"
+        },
+        {
+          id:5,
+          imgUrl:require("../../assets/images/app_slices/paotui.png"),
+          text:"跑腿"
+        },
+        {
+          id:6,
+          imgUrl:require("../../assets/images/app_slices/canyin.png"),
+          text:"餐饮"
+        },
+
+        {
+          id:7,
+          imgUrl:require("../../assets/images/app_slices/daohang.png"),
+          text:"导航"
+        },
+        {
+          id:8,
+          imgUrl:require("../../assets/images/app_slices/xinwen.png"),
+          text:"新闻类"
+        },
+        {
+          id:9,
+          imgUrl:require("../../assets/images/app_slices/jiaoyu.png"),
+          text:"教育"
+        },
+        {
+          id:10,
+          imgUrl:require("../../assets/images/app_slices/jinrong.png"),
+          text:"金融"
+        },
+        {
+          id:11,
+          imgUrl:require("../../assets/images/app_slices/meirong.png"),
+          text:"美容"
+        },
+        {
+          id:12,
+          imgUrl:require("../../assets/images/app_slices/jiazheng.png"),
+          text:"家政类APP"
+        },
+        {
+          id:13,
+          imgUrl:require("../../assets/images/app_slices/lvyou.png"),
+          text:"旅游类"
+        },
+        {
+          id:14,
+          imgUrl:require("../../assets/images/app_slices/waimai.png"),
+          text:"外卖"
+        },
+        {
+          id:15,
+          imgUrl:require("../../assets/images/app_slices/fangchan.png"),
+          text:"房产APP"
+        },
+        {
+          id:16,
+          imgUrl:require("../../assets/images/app_slices/jiaoyou.png"),
+          text:"交友类"
+        },
+        {
+          id:17,
+          imgUrl:require("../../assets/images/app_slices/jinrong2.png"),
+          text:"金融类APP"
+        },
+        {
+          id:18,
+          imgUrl:require("../../assets/images/app_slices/bangong.png"),
+          text:"办公类"
+        },
+        {
+          id:19,
+          imgUrl:require("../../assets/images/app_slices/youxi.png"),
+          text:"游戏"
+        },
+        {
+          id:20,
+          imgUrl:require("../../assets/images/app_slices/shenghuofuwu.png"),
+          text:"生活服务"
+        }
+      ]
     };
   },
   created() {},
   mounted() {},
-  methods: {}
+  methods: {},
 };
 </script>
 
@@ -165,10 +268,11 @@ export default {
   }
 }
 .recommend {
-  background: url("../../assets/images/app_slices/ff858317302cb0bc38bf40886ab5032a@2x.png") no-repeat;
-  background-size:cover;
+  background: url("../../assets/images/app_slices/ff858317302cb0bc38bf40886ab5032a@2x.png")
+    no-repeat;
+  background-size: cover;
   .recommend_box {
-    padding-top:40px;
+    padding-top: 40px;
     .recommend_item {
       border: 1px solid #dfdfdf;
       width: 388px;
